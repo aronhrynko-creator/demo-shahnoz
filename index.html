@@ -177,6 +177,26 @@ section{padding:96px 0}
 .team i{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--bg2);font-family:Literata,serif;font-style:italic;color:var(--gold);font-size:18px}
 .team b{font-weight:600;font-size:15px}.team small{display:block;color:var(--muted);font-size:12px}
 
+
+/* team */
+.masters{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.master{background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.master .ph{aspect-ratio:4/5;overflow:hidden}
+.master .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;transition:transform .7s}
+.master:hover .ph img{transform:scale(1.05)}
+.master .t{padding:18px 18px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.master h3{font-size:20px;letter-spacing:-.02em}
+.master .lvl{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.master p{color:var(--muted);font-size:14px;line-height:1.5}
+.master .btn{margin-top:auto;align-self:flex-start;padding:10px 18px;font-size:14px}
+.master .t>.btn{margin-top:12px}
+@media(max-width:1100px){.masters{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.masters{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -22px;padding:0 22px 6px;gap:12px;scrollbar-width:none}.masters::-webkit-scrollbar{display:none}.master{flex:none;width:72%;scroll-snap-align:start}}
+.more div small{display:block;color:var(--muted);font-size:13px;font-weight:400}
+.note{margin-top:18px;color:var(--muted);font-size:14px}
+.hours{display:grid;grid-template-columns:auto auto;gap:4px 18px;font-size:17px}
+.policy{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;line-height:1.55}
+
 /* reviews */
 .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .rev{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:16px;position:relative}
@@ -237,20 +257,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
     <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--text)"/><circle cx="20" cy="20" r="15" fill="none" stroke="var(--gold2)" stroke-width="1"/><text x="20" y="27" text-anchor="middle" font-family="Literata,Georgia,serif" font-style="italic" font-size="20" fill="var(--gold2)">S</text></svg>
     <span><b>Shahnoz</b><small>Nails · Brooklyn</small></span>
   </a>
-  <div class="links"><a href="#services">Services</a><a href="#studio">Studio</a><a href="#work">Our work</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div>
+  <div class="links"><a href="#services">Services</a><a href="#team">Team</a><a href="#work">Our work</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div>
   <div class="right">
     <button class="icon toggle" id="toggle" aria-label="Switch light/dark theme">
       <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
       <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
     </button>
     <button class="icon burger" id="burger" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg></button>
-    <a class="btn btn-dark book" href="https://shahnoznails.glossgenius.com/services" target="_blank" rel="noopener">Book</a>
+    <a class="btn btn-dark book" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">Book</a>
   </div>
 </nav>
 
 <div class="sheet" id="sheet">
-  <a href="#services">Services</a><a href="#studio">Studio</a><a href="#work">Our work</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
-  <a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/services" target="_blank" rel="noopener">Book online</a>
+  <a href="#services">Services</a><a href="#team">Team</a><a href="#work">Our work</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+  <a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">Book online</a>
 </div>
 
 <main id="top">
@@ -260,7 +280,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
       <h1>Every detail, <em class="shine">perfected.</em></h1>
       <p class="sub">Clean cuticles, perfect shape and a finish that lasts for weeks.</p>
       <div class="actions">
-        <a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/services" target="_blank" rel="noopener">Book online
+        <a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">Book online
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn btn-ghost" href="tel:+13474917777">Call us</a>
       </div>
@@ -286,24 +306,32 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
         <p class="muted">Every visit is unhurried, with sterile tools and premium gel.</p>
       </div>
       <div class="grid rv">
-        <a class="card" href="https://shahnoznails.glossgenius.com/services" target="_blank" rel="noopener">
+        <a class="card" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">
           <div class="im"><img loading="lazy" src="g-nude.jpg" alt="Signature manicure"></div>
           <div class="t"><h3>Signature manicure</h3><span class="muted">Precise dry cuticle care, no polish</span><span class="row"><span>45 min</span><b>$55+</b></span></div></a>
-        <a class="card" href="https://shahnoznails.glossgenius.com/services" target="_blank" rel="noopener">
+        <a class="card" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">
           <div class="im"><img loading="lazy" src="g-grey.jpg" alt="Gel manicure"></div>
           <div class="t"><h3>Gel manicure</h3><span class="muted">Short or medium, gel right at the cuticle</span><span class="row"><span>2 h</span><b>$70+</b></span></div></a>
-        <a class="card" href="https://shahnoznails.glossgenius.com/services" target="_blank" rel="noopener">
+        <a class="card" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">
           <div class="im"><img loading="lazy" src="g-french.jpg" alt="Gel extensions"></div>
           <div class="t"><h3>Gel extensions</h3><span class="muted">Perfect length and shape, up to 3 weeks</span><span class="row"><span>3 h 30 min</span><b>$170+</b></span></div></a>
       </div>
+      <div class="kicker rv" style="margin-top:44px">Full menu</div>
       <div class="more rv">
-        <div><span>Gel manicure, long</span><span>$80+</span></div>
-        <div><span>Manicure with hard gel</span><span>$75+</span></div>
-        <div><span>Smart pedicure</span><span>$60+</span></div>
-        <div><span>Smart pedicure with gel</span><span>$85+</span></div>
-        <div><span>French manicure design</span><span>$20+</span></div>
-        <div><span>Eyebrow lamination</span><span>$80+</span></div>
+        <div><span>Russian manicure, no polish<small>45–75 min</small></span><span>$55+</span></div>
+        <div><span>Russian gel manicure, short / medium<small>from 2 h</small></span><span>$70+</span></div>
+        <div><span>Russian gel manicure, long<small>from 2 h 30 min</small></span><span>$80+</span></div>
+        <div><span>Russian manicure with hard gel, short / medium<small>from 2 h</small></span><span>$75+</span></div>
+        <div><span>Russian manicure with hard gel, long<small>from 2 h 30 min</small></span><span>$85+</span></div>
+        <div><span>Gel nail extensions, extra long<small>from 3 h 30 min, lasts up to 3 weeks</small></span><span>$170+</span></div>
+        <div><span>Smart pedicure, no polish<small>from 1 h</small></span><span>$60+</span></div>
+        <div><span>Smart pedicure with gel<small>from 1 h 45 min</small></span><span>$85+</span></div>
+        <div><span>French manicure design<small>30 min, add-on</small></span><span>$20+</span></div>
+        <div><span>Broken nail repair, 1 nail<small>10 min</small></span><span>$5</span></div>
+        <div><span>Brow correction, threading and tint<small>10 min</small></span><span>$10+</span></div>
+        <div><span>Eyebrow lamination<small>55 min, lasts 6–8 weeks</small></span><span>$80+</span></div>
       </div>
+      <p class="note rv">Prices depend on the master’s level. Pick your master when you book.</p>
     </div>
   </section>
 
@@ -313,20 +341,34 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
       <div class="txt rv">
         <div class="kicker">The studio</div>
         <h2>Step <em>inside</em></h2>
-        <p>A bright, calm space where every appointment takes the time it needs.</p>
-        <ul class="feat"><li>Sterile, single-use tools</li><li>Premium gel and hard gel</li><li>Experienced, detail-focused masters</li><li>Easy online booking, 24/7</li></ul>
+        <p>Russian manicure specialists in Brighton Beach. Our team trained at Paris Nail Shop, Oza Art School and Luzan School, and we treat every client like family.</p>
+        <ul class="feat"><li>Sterile, single-use tools</li><li>Premium gel and hard gel</li><li>Experienced, detail-focused masters</li><li>Walk-ins and last-minute visits welcome</li><li>Easy online booking, 24/7</li></ul>
       </div>
     </div>
   </section>
 
-  <section id="work">
+  <section id="team">
+    <div class="wrap">
+      <div class="head rv"><div><div class="kicker">Our team</div><h2>Meet the <em>masters</em></h2></div>
+        <p class="muted">Five masters, one standard: precise, clean and unhurried.</p></div>
+      <div class="masters rv">
+        <article class="master"><div class="ph"><img loading="lazy" src="t-shahnoz.jpg" alt="Shahnoz, Owner · Educator at Shahnoz Nails"></div>
+          <div class="t"><span class="lvl">Owner · Educator</span><h3>Shahnoz</h3><p>Pro Top Master with 7+ years in beauty. Russian manicure, gel extensions, lashes and brows. By request only.</p><a class="btn btn-ghost" href="tel:+13474917777">Call to book</a></div></article>
+        <article class="master"><div class="ph"><img loading="lazy" src="t-maya.jpg" alt="Maya, Top Master at Shahnoz Nails"></div>
+          <div class="t"><span class="lvl">Top Master</span><h3>Maya</h3><p>5+ years of experience. Loves detail and makes every visit feel special.</p><a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">Book with Maya</a></div></article>
+        <article class="master"><div class="ph"><img loading="lazy" src="t-bonya.jpg" alt="Bonya, Top Master at Shahnoz Nails"></div>
+          <div class="t"><span class="lvl">Top Master</span><h3>Bonya</h3><p>Takes her time so every nail comes out perfect. A client favorite.</p><a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">Book with Bonya</a></div></article>
+        <article class="master"><div class="ph"><img loading="lazy" src="t-shaira.jpg" alt="Shaira, Pro Master at Shahnoz Nails"></div>
+          <div class="t"><span class="lvl">Pro Master</span><h3>Shaira</h3><p>Fun, unique designs that let your personality shine through.</p><a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">Book with Shaira</a></div></article>
+        <article class="master"><div class="ph"><img loading="lazy" src="t-dilya.jpg" alt="Dilya, Master at Shahnoz Nails"></div>
+          <div class="t"><span class="lvl">Master</span><h3>Dilya</h3><p>Clean, careful work and a calm, friendly visit.</p><a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">Book with Dilya</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="alt">
     <div class="wrap">
       <div class="head rv"><div><div class="kicker">Our work</div><h2>Made by <em>hand</em></h2></div>
-        <div class="team">
-          <div><i>S</i><span><b>Shahnoz</b><small>Pro master</small></span></div>
-          <div><i>S</i><span><b>Shaira</b><small>Master</small></span></div>
-          <div><i>M</i><span><b>Mamnuna</b><small>Master</small></span></div>
-        </div>
       </div>
       <div class="gal rv">
         <figure class="tall"><img loading="lazy" src="green.jpg" alt="Emerald glitter gel"></figure>
@@ -341,7 +383,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
     </div>
   </section>
 
-  <section id="reviews" class="alt">
+  <section id="reviews">
     <div class="wrap">
       <div class="head rv"><div><div class="kicker">Reviews</div><h2>4.5 ★ from <em>175 clients</em></h2></div></div>
       <div class="revs rv">
@@ -360,8 +402,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
         <dl>
           <div><dt>Address</dt><dd>505 Brighton Beach Ave, 2nd Floor<br>Brooklyn, NY 11235</dd></div>
           <div><dt>Phone</dt><dd><a href="tel:+13474917777">(347) 491-7777</a></dd></div>
+          <div><dt>Hours</dt><dd>Every day, 9 AM – 6 PM<br><small class="muted" style="font-size:15px">Walk-ins welcome, call for availability</small></dd></div>
+          <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/shahnoz_nails_brooklyn" target="_blank" rel="noopener">@shahnoz_nails_brooklyn</a></dd></div>
         </dl>
-        <a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/services" target="_blank" rel="noopener">Book online</a>
+        <a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">Book online</a>
+        <p class="policy">Booking requires a $20 deposit. Please give us 24 hours notice to cancel or reschedule. Late cancellations and no-shows forfeit the deposit.</p>
       </div>
       <div class="map rv"><iframe loading="lazy" title="Map" src="https://maps.google.com/maps?q=Shahnoz%20Nails%2C%20505%20Brighton%20Beach%20Ave%2C%20Brooklyn%2C%20NY%2011235&z=16&hl=en&output=embed"></iframe></div>
     </div>
@@ -371,7 +416,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
       <h2>Ready for perfect nails?<em class="shine">Book Shahnoz.</em></h2>
       <p>Book online in a minute, any time of day, or give us a call.</p>
       <a class="phone" href="tel:+13474917777">(347) 491-7777</a><br>
-      <a class="btn btn-call" href="https://shahnoznails.glossgenius.com/services" target="_blank" rel="noopener">Book now <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+      <a class="btn btn-call" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">Book now <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
     </div>
   </section>
 </main>
@@ -379,7 +424,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 
 <div class="bar" id="bar">
   <a class="btn btn-ghost" href="tel:+13474917777">Call</a>
-  <a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/services" target="_blank" rel="noopener">Book online</a>
+  <a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">Book online</a>
 </div>
 
 <script>
