@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shahnoz Nails | Nail Studio in Brighton Beach, Brooklyn</title>
+<meta name="description" content="Manicure, gel, extensions and brows at 505 Brighton Beach Ave, Brooklyn. 4.5★ from 175 Google reviews. Book online.">
+<meta name="theme-color" content="#f6f1ea" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f0d0c" media="(prefers-color-scheme: dark)">
+<script>try{var t=localStorage.getItem('sn-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='50' fill='%23111'/%3E%3Ccircle cx='50' cy='50' r='38' fill='none' stroke='%23c9a96e' stroke-width='3'/%3E%3Ctext x='50' y='66' font-family='Georgia' font-style='italic' font-size='46' text-anchor='middle' fill='%23e6cf9f'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preload" as="image" href="hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Literata:ital,opsz,wght@1,7..72,500;1,7..72,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f1ea;--bg2:#efe7dc;--card:#fffdf9;--line:rgba(60,45,25,.12);
+  --text:#1a1612;--muted:#6e6458;--gold:#9a7442;--gold2:#b48a52;--btn:#1a1612;--btntext:#f6f1ea;
+  --shadow:0 24px 60px -28px rgba(40,28,10,.4);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --bg:#0f0d0c;--bg2:#161311;--card:#1c1815;--line:rgba(230,207,159,.14);
+  --text:#f3ede4;--muted:#a39888;--gold:#d8b77a;--gold2:#e9d1a2;--btn:#f3ede4;--btntext:#14110e;
+  --shadow:0 24px 60px -28px rgba(0,0,0,.85);
+}}
+:root[data-theme=dark]{
+  --bg:#0f0d0c;--bg2:#161311;--card:#1c1815;--line:rgba(230,207,159,.14);
+  --text:#f3ede4;--muted:#a39888;--gold:#d8b77a;--gold2:#e9d1a2;--btn:#f3ede4;--btntext:#14110e;
+  --shadow:0 24px 60px -28px rgba(0,0,0,.85);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+section,[id]{scroll-margin-top:84px}
+html,body{overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:Onest,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+em{font-family:Literata,Georgia,serif;font-style:italic;font-weight:500;color:var(--gold);letter-spacing:-.02em}
+h1,h2,h3{font-weight:600;letter-spacing:-.035em;line-height:1.02}
+h2{font-size:clamp(34px,4.6vw,52px);margin:10px 0 14px}
+.kicker{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:54px;padding:0 26px;border-radius:999px;font-weight:600;font-size:16px;transition:.2s;white-space:nowrap}
+.btn-dark{background:var(--btn);color:var(--btntext)}
+.btn-dark:hover{transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--gold)}
+.btn svg{width:18px;height:18px}
+
+/* shimmer accent */
+.shine{background:linear-gradient(100deg,var(--gold) 20%,#f3dfb4 40%,var(--gold) 60%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s ease-in-out infinite}
+@keyframes shine{0%,100%{background-position:100% 0}50%{background-position:0 0}}
+
+/* nav */
+.nav{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:60;width:min(1100px,calc(100% - 20px));display:flex;align-items:center;justify-content:space-between;gap:12px;padding:7px 7px 7px 10px;border-radius:999px;background:color-mix(in srgb,var(--card) 82%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);box-shadow:var(--shadow)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo svg{width:40px;height:40px;flex:none}
+.logo b{display:block;font-size:15px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;line-height:1.1}
+.logo small{display:block;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.links{display:flex;gap:26px;font-size:15px;color:var(--muted)}
+.links a:hover{color:var(--text)}
+.right{display:flex;align-items:center;gap:6px}
+.icon{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--text);display:grid;place-items:center;cursor:pointer}
+.icon svg{width:19px;height:19px}
+.toggle .sun{display:none}
+:root[data-theme=dark] .toggle .sun{display:block}:root[data-theme=dark] .toggle .moon{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .toggle .sun{display:block}:root:not([data-theme=light]) .toggle .moon{display:none}}
+.nav .btn{height:44px;padding:0 20px;font-size:15px}
+.burger{display:none}
+@media(max-width:900px){.links{display:none}.burger{display:grid}.nav .book{display:none}}
+@media(max-width:400px){.logo small{display:none}}
+
+/* mobile menu */
+.sheet{position:fixed;inset:0;z-index:55;background:var(--bg);display:flex;flex-direction:column;justify-content:center;padding:90px 28px 40px;gap:6px;opacity:0;pointer-events:none;transition:.3s}
+.sheet.open{opacity:1;pointer-events:auto}
+.sheet a{font-size:40px;font-weight:600;letter-spacing:-.03em;padding:6px 0;border-bottom:1px solid var(--line)}
+.sheet .btn{margin-top:26px;font-size:17px}
+
+/* hero */
+.hero{padding-top:140px;padding-bottom:90px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hero>*{min-width:0}
+.pill{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.pill i{width:7px;height:7px;border-radius:50%;background:#4caf6a;box-shadow:0 0 0 4px rgba(76,175,106,.18);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 7px rgba(76,175,106,.05)}}
+.hero h1{font-size:clamp(46px,6.4vw,84px);margin:24px 0 20px}
+.hero h1 em{font-size:1.05em}
+.hero p.sub{font-size:19px;color:var(--muted);max-width:430px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin:32px 0 34px}
+.rating{display:flex;align-items:center;gap:14px}
+.rating b{font-size:34px;font-weight:600;letter-spacing:-.03em}
+.rating .stars{color:var(--gold2);letter-spacing:2px;font-size:15px}
+.rating span{display:block;font-size:14px;color:var(--muted)}
+.photo{position:relative;padding:0 0 0 34px}
+.photo .main{aspect-ratio:4/5;border-radius:32px;overflow:hidden;box-shadow:var(--shadow)}
+.photo .main img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);animation:settle 1.6s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes settle{to{transform:scale(1)}}
+.photo .mini{position:absolute;left:0;top:18%;width:30%;aspect-ratio:3/4;border-radius:20px;overflow:hidden;border:5px solid var(--bg);box-shadow:var(--shadow);animation:float 6s ease-in-out infinite}
+.photo .mini img{width:100%;height:100%;object-fit:cover}
+@keyframes float{50%{transform:translateY(-12px)}}
+.photo .quote{position:absolute;right:18px;bottom:22px;max-width:270px;padding:16px 18px;border-radius:20px;background:color-mix(in srgb,var(--card) 90%,transparent);backdrop-filter:blur(10px);border:1px solid var(--line);box-shadow:var(--shadow);font-size:15px}
+.photo .quote small{display:block;margin-top:6px;color:var(--muted);font-size:13px}
+.photo .quote .stars{color:var(--gold2);font-size:13px;letter-spacing:2px;margin-bottom:4px}
+.spin{position:absolute;right:10px;top:-44px;width:116px;height:116px;animation:rot 18s linear infinite;color:var(--gold)}
+.spin text{font-size:10.5px;letter-spacing:3.2px;text-transform:uppercase;font-weight:700;fill:currentColor}
+.spin{filter:drop-shadow(0 10px 24px rgba(0,0,0,.35))}
+@keyframes rot{to{transform:rotate(360deg)}}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;padding-top:104px;padding-bottom:60px;gap:34px}
+  .hero h1{font-size:clamp(44px,12vw,60px);margin:18px 0 14px}
+  .hero p.sub{font-size:17px}
+  .actions{margin:24px 0 26px}.actions .btn{flex:1}
+  .photo{padding:0}.photo .mini{display:none}
+  .photo .main{aspect-ratio:4/4.4;border-radius:26px}
+  .spin{right:8px;top:-34px;width:96px;height:96px}
+  .photo .quote{left:12px;right:12px;bottom:12px;max-width:none}
+}
+
+/* marquee */
+.marq{border-block:1px solid var(--line);overflow:hidden;padding:18px 0}
+.marq div{display:flex;gap:40px;width:max-content;animation:mq 30s linear infinite;font-size:22px;font-weight:500;letter-spacing:-.02em}
+.marq span:nth-child(even){font-family:Literata,serif;font-style:italic;color:var(--gold)}
+.marq span:after{content:"✦";margin-left:40px;color:var(--gold);font-size:12px;vertical-align:middle;font-style:normal}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{padding:96px 0}
+@media(max-width:700px){section{padding:68px 0}}
+.alt{background:var(--bg2)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:36px}
+.head p{max-width:420px}
+
+/* services */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.card .im{overflow:hidden}
+.card img{aspect-ratio:4/3;object-fit:cover;width:100%;transition:transform .6s}
+.card:hover img{transform:scale(1.06)}
+.card div.t{padding:20px 22px 22px;display:flex;flex-direction:column;gap:4px;flex:1}
+.card h3{font-size:21px;letter-spacing:-.02em}
+.card .row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:12px;font-size:15px;color:var(--muted)}
+.card .row b{font-size:20px;color:var(--text)}
+.more{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px;margin-top:30px}
+.more div{display:flex;justify-content:space-between;gap:12px;padding:16px 0;border-bottom:1px solid var(--line);font-size:16px}
+.more div span:last-child{font-weight:600;white-space:nowrap}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}.more{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -22px;padding:0 22px 6px;gap:12px;scrollbar-width:none}
+  .grid::-webkit-scrollbar{display:none}
+  .card{flex:none;width:78%;scroll-snap-align:start}
+}
+
+/* studio */
+.studio{display:grid;grid-template-columns:1.15fr .85fr;gap:20px;align-items:stretch}
+.studio>*{min-width:0}
+.studio .big{border-radius:28px;overflow:hidden;position:relative;min-height:460px}
+.studio .big img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.studio .big span{position:absolute;left:18px;bottom:18px;padding:10px 16px;border-radius:999px;background:rgba(15,13,12,.6);backdrop-filter:blur(8px);color:#fff;font-size:14px}
+.studio .txt{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:36px;display:flex;flex-direction:column;justify-content:center}
+.studio .txt p{color:var(--muted);font-size:17px}
+.feat{list-style:none;margin-top:24px;display:grid;gap:12px}
+.feat li{display:flex;gap:12px;align-items:center;font-weight:500}
+.feat li:before{content:"✦";color:var(--gold);font-size:13px}
+@media(max-width:900px){.studio{grid-template-columns:1fr}.studio .big{min-height:340px}.studio .txt{padding:28px}}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:12px}
+.gal figure{border-radius:20px;overflow:hidden;position:relative}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.gal figure:hover img{transform:scale(1.07)}
+.gal .tall{grid-row:span 2}
+.gal .wide{grid-column:span 2}
+@media(max-width:800px){.gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px;gap:10px}}
+.team{display:flex;gap:10px;flex-wrap:wrap}
+.team div{display:flex;align-items:center;gap:12px;padding:8px 18px 8px 8px;border-radius:999px;border:1px solid var(--line);background:var(--card)}
+.team i{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--bg2);font-family:Literata,serif;font-style:italic;color:var(--gold);font-size:18px}
+.team b{font-weight:600;font-size:15px}.team small{display:block;color:var(--muted);font-size:12px}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rev{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:16px;position:relative}
+.rev:before{content:"“";position:absolute;right:22px;top:4px;font-family:Literata,serif;font-size:90px;color:var(--gold);opacity:.25;line-height:1}
+.rev .stars{color:var(--gold2);letter-spacing:2px}
+.rev p{font-size:18px}
+.rev small{color:var(--muted);margin-top:auto}
+@media(max-width:900px){.revs{grid-template-columns:1fr}}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:16px}
+.contact>*{min-width:0}
+.box{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:36px}
+.box dl{display:grid;gap:22px;margin:24px 0 30px}
+.box dt{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.box dd{font-size:20px;font-weight:500;margin-top:4px}
+.box dd a{display:inline-block;padding:8px 0}
+.map{border-radius:28px;overflow:hidden;border:1px solid var(--line);min-height:360px}
+.map iframe{width:100%;height:100%;min-height:360px;border:0}
+@media(max-width:900px){.contact{grid-template-columns:1fr}.box{padding:28px}.map,.map iframe{min-height:300px}}
+footer{padding:30px 0 40px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:26px}
+
+/* sticky mobile bar */
+.bar{display:none}
+@media(max-width:700px){
+  .bar{display:flex;gap:8px;position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:50;padding:8px;border-radius:999px;background:color-mix(in srgb,var(--card) 88%,transparent);backdrop-filter:blur(14px);border:1px solid var(--line);box-shadow:var(--shadow);transform:translateY(140%);transition:.35s}
+  .bar.show{transform:none}
+  .bar .btn{height:48px;flex:1;font-size:15px}
+  footer{padding-bottom:110px}
+}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+/* final cta */
+.cta{text-align:center;padding:150px 0 140px;position:relative;overflow:hidden}
+.cta:before{content:"";position:absolute;left:50%;top:50%;width:900px;height:900px;transform:translate(-50%,-50%);background:radial-gradient(circle,color-mix(in srgb,var(--gold) 16%,transparent),transparent 62%);pointer-events:none}
+.cta>*{position:relative}
+.cta h2{font-size:clamp(44px,8.4vw,112px);letter-spacing:-.045em;line-height:.98;margin:0}
+.cta h2 em{display:block;font-size:1.02em;margin-top:6px}
+.cta p{color:var(--muted);font-size:18px;margin:34px 0 36px}
+.cta .phone{display:inline-block;font-size:clamp(38px,5.4vw,64px);font-weight:600;letter-spacing:-.03em;margin-bottom:34px;transition:.2s}
+.cta .phone:hover{color:var(--gold)}
+.cta .btn-call{height:62px;padding:0 8px 0 28px;font-size:17px;gap:16px;background:linear-gradient(135deg,#c9a46a,#9a7442);color:#fff;box-shadow:0 18px 40px -16px rgba(154,116,66,.7)}
+.cta .btn-call i{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center}
+.cta .btn-call:hover{transform:translateY(-2px)}
+.cta .btn-call svg{width:20px;height:20px}
+@media(max-width:700px){.cta{padding:110px 0 100px}.cta p{font-size:16px}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="#top" class="logo" aria-label="Shahnoz Nails">
+    <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--text)"/><circle cx="20" cy="20" r="15" fill="none" stroke="var(--gold2)" stroke-width="1"/><text x="20" y="27" text-anchor="middle" font-family="Literata,Georgia,serif" font-style="italic" font-size="20" fill="var(--gold2)">S</text></svg>
+    <span><b>Shahnoz</b><small>Nails · Brooklyn</small></span>
+  </a>
+  <div class="links"><a href="#services">Services</a><a href="#studio">Studio</a><a href="#work">Our work</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div>
+  <div class="right">
+    <button class="icon toggle" id="toggle" aria-label="Switch light/dark theme">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+    <button class="icon burger" id="burger" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg></button>
+    <a class="btn btn-dark book" href="https://shahnoznails.glossgenius.com/services" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<div class="sheet" id="sheet">
+  <a href="#services">Services</a><a href="#studio">Studio</a><a href="#work">Our work</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+  <a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/services" target="_blank" rel="noopener">Book online</a>
+</div>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="rv">
+      <span class="pill"><i></i>Brighton Beach · Brooklyn</span>
+      <h1>Every detail, <em class="shine">perfected.</em></h1>
+      <p class="sub">Clean cuticles, perfect shape and a finish that lasts for weeks.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/services" target="_blank" rel="noopener">Book online
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="tel:+13474917777">Call us</a>
+      </div>
+      <div class="rating"><b>4.5</b><div><div class="stars">★★★★★</div><span>175 reviews on Google</span></div></div>
+    </div>
+    <div class="photo rv">
+      <div class="main"><img src="hero.jpg" alt="French manicure with a gold ring, Shahnoz Nails" fetchpriority="high"></div>
+      <div class="mini"><img src="red.jpg" alt="Red gel manicure"></div>
+      <svg class="spin" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="59" fill="var(--card)" stroke="var(--line)"/><defs><path id="c" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><text><textPath href="#c">Book online · Shahnoz Nails · </textPath></text><text x="60" y="70" text-anchor="middle" style="font-size:26px;letter-spacing:0;font-family:Literata,serif;font-style:italic">S</text></svg>
+      <div class="quote"><div class="stars">★★★★★</div>“Exactly how I wanted it.”<small>Julia S., Google review</small></div>
+    </div>
+  </div>
+
+  <div class="marq" aria-hidden="true"><div>
+    <span>Signature manicure</span><span>hard gel</span><span>Gel extensions</span><span>French design</span><span>Smart pedicure</span><span>brow lamination</span>
+    <span>Signature manicure</span><span>hard gel</span><span>Gel extensions</span><span>French design</span><span>Smart pedicure</span><span>brow lamination</span>
+  </div></div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="head rv">
+        <div><div class="kicker">Services</div><h2>Popular <em>services</em></h2></div>
+        <p class="muted">Every visit is unhurried, with sterile tools and premium gel.</p>
+      </div>
+      <div class="grid rv">
+        <a class="card" href="https://shahnoznails.glossgenius.com/services" target="_blank" rel="noopener">
+          <div class="im"><img loading="lazy" src="g-nude.jpg" alt="Signature manicure"></div>
+          <div class="t"><h3>Signature manicure</h3><span class="muted">Precise dry cuticle care, no polish</span><span class="row"><span>45 min</span><b>$55+</b></span></div></a>
+        <a class="card" href="https://shahnoznails.glossgenius.com/services" target="_blank" rel="noopener">
+          <div class="im"><img loading="lazy" src="g-grey.jpg" alt="Gel manicure"></div>
+          <div class="t"><h3>Gel manicure</h3><span class="muted">Short or medium, gel right at the cuticle</span><span class="row"><span>2 h</span><b>$70+</b></span></div></a>
+        <a class="card" href="https://shahnoznails.glossgenius.com/services" target="_blank" rel="noopener">
+          <div class="im"><img loading="lazy" src="g-french.jpg" alt="Gel extensions"></div>
+          <div class="t"><h3>Gel extensions</h3><span class="muted">Perfect length and shape, up to 3 weeks</span><span class="row"><span>3 h 30 min</span><b>$170+</b></span></div></a>
+      </div>
+      <div class="more rv">
+        <div><span>Gel manicure, long</span><span>$80+</span></div>
+        <div><span>Manicure with hard gel</span><span>$75+</span></div>
+        <div><span>Smart pedicure</span><span>$60+</span></div>
+        <div><span>Smart pedicure with gel</span><span>$85+</span></div>
+        <div><span>French manicure design</span><span>$20+</span></div>
+        <div><span>Eyebrow lamination</span><span>$80+</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="studio" class="alt">
+    <div class="wrap studio">
+      <div class="big rv"><img loading="lazy" src="salon.jpg" alt="Inside Shahnoz Nails studio"><span>505 Brighton Beach Ave, 2nd floor</span></div>
+      <div class="txt rv">
+        <div class="kicker">The studio</div>
+        <h2>Step <em>inside</em></h2>
+        <p>A bright, calm space where every appointment takes the time it needs.</p>
+        <ul class="feat"><li>Sterile, single-use tools</li><li>Premium gel and hard gel</li><li>Experienced, detail-focused masters</li><li>Easy online booking, 24/7</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="head rv"><div><div class="kicker">Our work</div><h2>Made by <em>hand</em></h2></div>
+        <div class="team">
+          <div><i>S</i><span><b>Shahnoz</b><small>Pro master</small></span></div>
+          <div><i>S</i><span><b>Shaira</b><small>Master</small></span></div>
+          <div><i>M</i><span><b>Mamnuna</b><small>Master</small></span></div>
+        </div>
+      </div>
+      <div class="gal rv">
+        <figure class="tall"><img loading="lazy" src="green.jpg" alt="Emerald glitter gel"></figure>
+        <figure><img loading="lazy" src="white.jpg" alt="White square nails"></figure>
+        <figure><img loading="lazy" src="g-pink.jpg" alt="Pink almond nails"></figure>
+        <figure class="tall"><img loading="lazy" src="dark.jpg" alt="Deep cherry gel"></figure>
+        <figure class="wide"><img loading="lazy" src="navy.jpg" alt="Navy gel manicure"></figure>
+        <figure><img loading="lazy" src="g-marble.jpg" alt="Marble almond nails"></figure>
+        <figure><img loading="lazy" src="g-shimmer.jpg" alt="Shimmer nails"></figure>
+        <figure class="wide"><img loading="lazy" src="g-french2.jpg" alt="French manicure"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="alt">
+    <div class="wrap">
+      <div class="head rv"><div><div class="kicker">Reviews</div><h2>4.5 ★ from <em>175 clients</em></h2></div></div>
+      <div class="revs rv">
+        <div class="rev"><div class="stars">★★★★★</div><p>“The wait was worth it. My girl Bonya was awesome.”</p><small>Loren M., Google</small></div>
+        <div class="rev"><div class="stars">★★★★★</div><p>“The service was professional, friendly, and very attentive to detail. Highly recommend!”</p><small>Julia S., Google</small></div>
+        <div class="rev"><div class="stars">★★★★★</div><p>“Maya and the other nail artists were very warm and welcoming! My nails are beautiful!”</p><small>Grace C., Google</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div class="box rv">
+        <div class="kicker">Visit us</div>
+        <h2>See you <em>soon</em></h2>
+        <dl>
+          <div><dt>Address</dt><dd>505 Brighton Beach Ave, 2nd Floor<br>Brooklyn, NY 11235</dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+13474917777">(347) 491-7777</a></dd></div>
+        </dl>
+        <a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/services" target="_blank" rel="noopener">Book online</a>
+      </div>
+      <div class="map rv"><iframe loading="lazy" title="Map" src="https://maps.google.com/maps?q=Shahnoz%20Nails%2C%20505%20Brighton%20Beach%20Ave%2C%20Brooklyn%2C%20NY%2011235&z=16&hl=en&output=embed"></iframe></div>
+    </div>
+  </section>
+  <section class="cta" id="book">
+    <div class="wrap rv">
+      <h2>Ready for perfect nails?<em class="shine">Book Shahnoz.</em></h2>
+      <p>Book online in a minute, any time of day, or give us a call.</p>
+      <a class="phone" href="tel:+13474917777">(347) 491-7777</a><br>
+      <a class="btn btn-call" href="https://shahnoznails.glossgenius.com/services" target="_blank" rel="noopener">Book now <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>© 2026 Shahnoz Nails</span><span>505 Brighton Beach Ave, Brooklyn</span></div></footer>
+
+<div class="bar" id="bar">
+  <a class="btn btn-ghost" href="tel:+13474917777">Call</a>
+  <a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/services" target="_blank" rel="noopener">Book online</a>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement,mq=matchMedia('(prefers-color-scheme: dark)');
+  function cur(){return root.dataset.theme||(mq.matches?'dark':'light')}
+  document.getElementById('toggle').onclick=function(){
+    var next=cur()==='dark'?'light':'dark';
+    if((next==='dark')===mq.matches){delete root.dataset.theme;try{localStorage.removeItem('sn-theme')}catch(e){}}
+    else{root.dataset.theme=next;try{localStorage.setItem('sn-theme',next)}catch(e){}}
+  };
+  var sheet=document.getElementById('sheet');
+  document.getElementById('burger').onclick=function(){sheet.classList.toggle('open')};
+  sheet.querySelectorAll('a').forEach(function(a){a.onclick=function(){sheet.classList.remove('open')}});
+  var bar=document.getElementById('bar');
+  addEventListener('scroll',function(){bar.classList.toggle('show',scrollY>500)},{passive:true});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
