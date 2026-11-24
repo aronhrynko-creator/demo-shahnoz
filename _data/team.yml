@@ -1,0 +1,27 @@
+intro: "Five masters, one standard: precise, clean and unhurried."
+masters:
+  - name: Shahnoz
+    level: Owner · Educator
+    bio: Pro Top Master with 7+ years in beauty. Russian manicure, gel extensions, lashes and brows. By request only.
+    photo: /images/t-shahnoz.jpg
+    booking: Call to book
+  - name: Maya
+    level: Top Master
+    bio: 5+ years of experience. Loves detail and makes every visit feel special.
+    photo: /images/t-maya.jpg
+    booking: Book online
+  - name: Bonya
+    level: Top Master
+    bio: Takes her time so every nail comes out perfect. A client favorite.
+    photo: /images/t-bonya.jpg
+    booking: Book online
+  - name: Shaira
+    level: Pro Master
+    bio: Fun, unique designs that let your personality shine through.
+    photo: /images/t-shaira.jpg
+    booking: Book online
+  - name: Dilya
+    level: Master
+    bio: Clean, careful work and a calm, friendly visit.
+    photo: /images/t-dilya.jpg
+    booking: Book online

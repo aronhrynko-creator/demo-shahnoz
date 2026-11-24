@@ -1,0 +1,151 @@
+# Pages CMS admin for the Shahnoz Nails website (app.pagescms.org).
+media:
+  input: images
+  output: /images
+  categories: [image]
+  rename: safe
+
+settings:
+  hide: true
+  content:
+    merge: true
+
+content:
+  - name: business
+    label: Business info
+    type: file
+    path: _data/business.yml
+    fields:
+      - { name: name, label: Salon name, type: string, required: true }
+      - { name: tagline, label: Small text under the logo, type: string }
+      - { name: booking_link, label: Online booking link (GlossGenius), type: string, required: true, description: "Every Book button on the site opens this link." }
+      - { name: phone, label: Phone number, type: string, required: true, description: "For example (347) 491-7777" }
+      - { name: address_line1, label: Address (street), type: string }
+      - { name: address_line2, label: Address (city, state, ZIP), type: string }
+      - { name: area, label: Neighborhood badge (top of the page), type: string }
+      - { name: hours, label: Opening hours, type: string }
+      - { name: hours_note, label: Note under the hours, type: string }
+      - { name: instagram, label: Instagram username, type: string, description: "Just the name, without @" }
+      - { name: google_rating, label: Google rating, type: string, description: "For example 4.5" }
+      - { name: google_reviews_count, label: Number of Google reviews, type: string }
+      - { name: booking_policy, label: Deposit and cancellation policy, type: text }
+      - { name: seo_title, label: Title in Google search results, type: string }
+      - { name: seo_description, label: Description in Google search results, type: text }
+
+  - name: home
+    label: Main page texts and photos
+    type: file
+    path: _data/home.yml
+    fields:
+      - { name: hero_title, label: Big headline, type: string }
+      - { name: hero_title_accent, label: Big headline, gold part, type: string }
+      - { name: hero_text, label: Text under the headline, type: text }
+      - { name: hero_photo, label: Main photo (top of the page), type: image }
+      - { name: hero_photo_small, label: Small photo next to the main photo, type: image, description: "Shown on computers only." }
+      - { name: hero_quote, label: Review on the main photo, type: string }
+      - { name: hero_quote_author, label: Author of that review, type: string }
+      - { name: ticker, label: Moving words strip, type: string, list: true }
+      - { name: studio_photo, label: Studio photo, type: image }
+      - { name: studio_photo_caption, label: Caption on the studio photo, type: string }
+      - { name: studio_title, label: Studio headline, type: string }
+      - { name: studio_title_accent, label: Studio headline, gold part, type: string }
+      - { name: studio_text, label: About the studio, type: text }
+      - { name: studio_highlights, label: Studio highlights, type: string, list: true }
+      - { name: final_title, label: Bottom headline, type: string }
+      - { name: final_title_accent, label: Bottom headline, gold part, type: string }
+      - { name: final_text, label: Bottom text, type: text }
+
+  - name: services
+    label: Services and prices
+    type: file
+    path: _data/services.yml
+    fields:
+      - { name: intro, label: Intro text, type: text }
+      - name: popular
+        label: Popular services (cards with photos)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name} {price}"
+        fields:
+          - { name: name, label: Service name, type: string, required: true }
+          - { name: description, label: Short description, type: string }
+          - { name: duration, label: Time, type: string, description: "For example 2 h" }
+          - { name: price, label: Price, type: string, description: "For example $70+" }
+          - { name: photo, label: Photo, type: image }
+      - name: menu
+        label: Full price list
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name} {price}"
+        fields:
+          - { name: name, label: Service name, type: string, required: true }
+          - { name: details, label: Time or details, type: string }
+          - { name: price, label: Price, type: string }
+      - { name: note, label: Note under the price list, type: text }
+
+  - name: team
+    label: Team
+    type: file
+    path: _data/team.yml
+    fields:
+      - { name: intro, label: Intro text, type: text }
+      - name: masters
+        label: Masters
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}, {level}"
+        fields:
+          - { name: name, label: Name, type: string, required: true }
+          - { name: level, label: Level, type: string, description: "For example Top Master" }
+          - { name: bio, label: About, type: text }
+          - { name: photo, label: Photo, type: image }
+          - name: booking
+            label: Button
+            type: select
+            options:
+              values: [Book online, Call to book]
+
+  - name: gallery
+    label: Our work (photo gallery)
+    type: file
+    path: _data/gallery.yml
+    fields:
+      - name: photos
+        label: Photos
+        type: object
+        description: "Drag photos to change the order. 8 photos fill the grid best."
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{description}"
+        fields:
+          - { name: photo, label: Photo, type: image, required: true }
+          - { name: description, label: What is in the photo, type: string, description: "Short, for example Red gel manicure" }
+          - name: size
+            label: Size in the grid
+            type: select
+            options:
+              values: [Normal, Tall, Wide]
+
+  - name: reviews
+    label: Reviews
+    type: file
+    path: _data/reviews.yml
+    fields:
+      - name: reviews
+        label: Reviews
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{author}"
+        fields:
+          - { name: text, label: Review text, type: text, required: true }
+          - { name: author, label: Name, type: string, description: "For example Julia S., Google" }
+          - { name: stars, label: Stars, type: number, options: { min: 1, max: 5 } }

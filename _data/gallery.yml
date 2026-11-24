@@ -1,0 +1,25 @@
+photos:
+  - photo: /images/green.jpg
+    description: Emerald glitter gel
+    size: Tall
+  - photo: /images/white.jpg
+    description: White square nails
+    size: Normal
+  - photo: /images/g-pink.jpg
+    description: Pink almond nails
+    size: Normal
+  - photo: /images/dark.jpg
+    description: Deep cherry gel
+    size: Tall
+  - photo: /images/navy.jpg
+    description: Navy gel manicure
+    size: Wide
+  - photo: /images/g-marble.jpg
+    description: Marble almond nails
+    size: Normal
+  - photo: /images/g-shimmer.jpg
+    description: Shimmer nails
+    size: Normal
+  - photo: /images/g-french2.jpg
+    description: French manicure
+    size: Wide

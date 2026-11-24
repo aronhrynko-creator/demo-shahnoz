@@ -1,0 +1,55 @@
+intro: Every visit is unhurried, with sterile tools and premium gel.
+popular:
+  - name: Signature manicure
+    description: Precise dry cuticle care, no polish
+    duration: 45 min
+    price: $55+
+    photo: /images/g-nude.jpg
+  - name: Gel manicure
+    description: Short or medium, gel right at the cuticle
+    duration: 2 h
+    price: $70+
+    photo: /images/g-grey.jpg
+  - name: Gel extensions
+    description: Perfect length and shape, up to 3 weeks
+    duration: 3 h 30 min
+    price: $170+
+    photo: /images/g-french.jpg
+menu:
+  - name: Russian manicure, no polish
+    details: 45–75 min
+    price: $55+
+  - name: Russian gel manicure, short / medium
+    details: from 2 h
+    price: $70+
+  - name: Russian gel manicure, long
+    details: from 2 h 30 min
+    price: $80+
+  - name: Russian manicure with hard gel, short / medium
+    details: from 2 h
+    price: $75+
+  - name: Russian manicure with hard gel, long
+    details: from 2 h 30 min
+    price: $85+
+  - name: Gel nail extensions, extra long
+    details: from 3 h 30 min, lasts up to 3 weeks
+    price: $170+
+  - name: Smart pedicure, no polish
+    details: from 1 h
+    price: $60+
+  - name: Smart pedicure with gel
+    details: from 1 h 45 min
+    price: $85+
+  - name: French manicure design
+    details: 30 min, add-on
+    price: $20+
+  - name: Broken nail repair, 1 nail
+    details: 10 min
+    price: $5
+  - name: Brow correction, threading and tint
+    details: 10 min
+    price: $10+
+  - name: Eyebrow lamination
+    details: 55 min, lasts 6–8 weeks
+    price: $80+
+note: Prices depend on the master’s level. Pick your master when you book.

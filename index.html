@@ -1,15 +1,29 @@
+---
+# This page is filled in from the files in the _data folder.
+# Edit the content with Pages CMS (app.pagescms.org), not here.
+---
+{%- assign b = site.data.business -%}
+{%- assign h = site.data.home -%}
+{%- assign s = site.data.services -%}
+{%- assign t = site.data.team -%}
+{%- assign g = site.data.gallery -%}
+{%- assign r = site.data.reviews -%}
+{%- assign tel = b.phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' | remove: '.' -%}
+{%- unless tel contains '+' -%}{%- assign tel = tel | prepend: '+1' -%}{%- endunless -%}
+{%- assign insta = b.instagram | remove: '@' | remove: 'https://www.instagram.com/' | remove: 'https://instagram.com/' | remove: '/' -%}
+{%- capture book %}href="{{ b.booking_link }}" target="_blank" rel="noopener"{% endcapture -%}
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Shahnoz Nails | Nail Studio in Brighton Beach, Brooklyn</title>
-<meta name="description" content="Manicure, gel, extensions and brows at 505 Brighton Beach Ave, Brooklyn. 4.5★ from 175 Google reviews. Book online.">
+<title>{{ b.seo_title }}</title>
+<meta name="description" content="{{ b.seo_description | escape }}">
 <meta name="theme-color" content="#f6f1ea" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0f0d0c" media="(prefers-color-scheme: dark)">
 <script>try{var t=localStorage.getItem('sn-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='50' fill='%23111'/%3E%3Ccircle cx='50' cy='50' r='38' fill='none' stroke='%23c9a96e' stroke-width='3'/%3E%3Ctext x='50' y='66' font-family='Georgia' font-style='italic' font-size='46' text-anchor='middle' fill='%23e6cf9f'%3ES%3C/text%3E%3C/svg%3E">
-<link rel="preload" as="image" href="hero.jpg">
+<link rel="preload" as="image" href="{{ h.hero_photo | remove_first: '/' }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Literata:ital,opsz,wght@1,7..72,500;1,7..72,600&display=swap" rel="stylesheet">
@@ -253,9 +267,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 <body>
 
 <nav class="nav">
-  <a href="#top" class="logo" aria-label="Shahnoz Nails">
-    <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--text)"/><circle cx="20" cy="20" r="15" fill="none" stroke="var(--gold2)" stroke-width="1"/><text x="20" y="27" text-anchor="middle" font-family="Literata,Georgia,serif" font-style="italic" font-size="20" fill="var(--gold2)">S</text></svg>
-    <span><b>Shahnoz</b><small>Nails · Brooklyn</small></span>
+  <a href="#top" class="logo" aria-label="{{ b.name | escape }}">
+    <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--text)"/><circle cx="20" cy="20" r="15" fill="none" stroke="var(--gold2)" stroke-width="1"/><text x="20" y="27" text-anchor="middle" font-family="Literata,Georgia,serif" font-style="italic" font-size="20" fill="var(--gold2)">{{ b.name | slice: 0 }}</text></svg>
+    <span><b>{{ b.name | split: ' ' | first }}</b><small>{{ b.tagline }}</small></span>
   </a>
   <div class="links"><a href="#services">Services</a><a href="#team">Team</a><a href="#work">Our work</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div>
   <div class="right">
@@ -264,85 +278,80 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
       <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
     </button>
     <button class="icon burger" id="burger" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg></button>
-    <a class="btn btn-dark book" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">Book</a>
+    <a class="btn btn-dark book" {{ book }}>Book</a>
   </div>
 </nav>
 
 <div class="sheet" id="sheet">
   <a href="#services">Services</a><a href="#team">Team</a><a href="#work">Our work</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
-  <a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">Book online</a>
+  <a class="btn btn-dark" {{ book }}>Book online</a>
 </div>
 
 <main id="top">
   <div class="wrap hero">
     <div class="rv">
-      <span class="pill"><i></i>Brighton Beach · Brooklyn</span>
-      <h1>Every detail, <em class="shine">perfected.</em></h1>
-      <p class="sub">Clean cuticles, perfect shape and a finish that lasts for weeks.</p>
+      <span class="pill"><i></i>{{ b.area }}</span>
+      <h1>{{ h.hero_title }} <em class="shine">{{ h.hero_title_accent }}</em></h1>
+      <p class="sub">{{ h.hero_text }}</p>
       <div class="actions">
-        <a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">Book online
+        <a class="btn btn-dark" {{ book }}>Book online
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-ghost" href="tel:+13474917777">Call us</a>
+        <a class="btn btn-ghost" href="tel:{{ tel }}">Call us</a>
       </div>
-      <div class="rating"><b>4.5</b><div><div class="stars">★★★★★</div><span>175 reviews on Google</span></div></div>
+      <div class="rating"><b>{{ b.google_rating }}</b><div><div class="stars">★★★★★</div><span>{{ b.google_reviews_count }} reviews on Google</span></div></div>
     </div>
     <div class="photo rv">
-      <div class="main"><img src="hero.jpg" alt="French manicure with a gold ring, Shahnoz Nails" fetchpriority="high"></div>
-      <div class="mini"><img src="red.jpg" alt="Red gel manicure"></div>
-      <svg class="spin" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="59" fill="var(--card)" stroke="var(--line)"/><defs><path id="c" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><text><textPath href="#c">Book online · Shahnoz Nails · </textPath></text><text x="60" y="70" text-anchor="middle" style="font-size:26px;letter-spacing:0;font-family:Literata,serif;font-style:italic">S</text></svg>
-      <div class="quote"><div class="stars">★★★★★</div>“Exactly how I wanted it.”<small>Julia S., Google review</small></div>
+      <div class="main"><img src="{{ h.hero_photo | remove_first: '/' }}" alt="{{ b.name | escape }}" fetchpriority="high"></div>
+      {%- if h.hero_photo_small and h.hero_photo_small != '' %}
+      <div class="mini"><img src="{{ h.hero_photo_small | remove_first: '/' }}" alt="{{ b.name | escape }}"></div>
+      {%- endif %}
+      <svg class="spin" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="59" fill="var(--card)" stroke="var(--line)"/><defs><path id="c" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><text><textPath href="#c">Book online · {{ b.name }} · </textPath></text><text x="60" y="70" text-anchor="middle" style="font-size:26px;letter-spacing:0;font-family:Literata,serif;font-style:italic">{{ b.name | slice: 0 }}</text></svg>
+      {%- if h.hero_quote and h.hero_quote != '' %}
+      <div class="quote"><div class="stars">★★★★★</div>“{{ h.hero_quote }}”<small>{{ h.hero_quote_author }}</small></div>
+      {%- endif %}
     </div>
   </div>
 
+  {%- if h.ticker.size > 0 %}
   <div class="marq" aria-hidden="true"><div>
-    <span>Signature manicure</span><span>hard gel</span><span>Gel extensions</span><span>French design</span><span>Smart pedicure</span><span>brow lamination</span>
-    <span>Signature manicure</span><span>hard gel</span><span>Gel extensions</span><span>French design</span><span>Smart pedicure</span><span>brow lamination</span>
+    {% for w in h.ticker %}<span>{{ w }}</span>{% endfor %}
+    {% for w in h.ticker %}<span>{{ w }}</span>{% endfor %}
   </div></div>
+  {%- endif %}
 
   <section id="services">
     <div class="wrap">
       <div class="head rv">
         <div><div class="kicker">Services</div><h2>Popular <em>services</em></h2></div>
-        <p class="muted">Every visit is unhurried, with sterile tools and premium gel.</p>
+        <p class="muted">{{ s.intro }}</p>
       </div>
       <div class="grid rv">
-        <a class="card" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">
-          <div class="im"><img loading="lazy" src="g-nude.jpg" alt="Signature manicure"></div>
-          <div class="t"><h3>Signature manicure</h3><span class="muted">Precise dry cuticle care, no polish</span><span class="row"><span>45 min</span><b>$55+</b></span></div></a>
-        <a class="card" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">
-          <div class="im"><img loading="lazy" src="g-grey.jpg" alt="Gel manicure"></div>
-          <div class="t"><h3>Gel manicure</h3><span class="muted">Short or medium, gel right at the cuticle</span><span class="row"><span>2 h</span><b>$70+</b></span></div></a>
-        <a class="card" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">
-          <div class="im"><img loading="lazy" src="g-french.jpg" alt="Gel extensions"></div>
-          <div class="t"><h3>Gel extensions</h3><span class="muted">Perfect length and shape, up to 3 weeks</span><span class="row"><span>3 h 30 min</span><b>$170+</b></span></div></a>
+        {%- for c in s.popular %}
+        <a class="card" {{ book }}>
+          <div class="im"><img loading="lazy" src="{{ c.photo | remove_first: '/' }}" alt="{{ c.name | escape }}"></div>
+          <div class="t"><h3>{{ c.name }}</h3><span class="muted">{{ c.description }}</span><span class="row"><span>{{ c.duration }}</span><b>{{ c.price }}</b></span></div></a>
+        {%- endfor %}
       </div>
+      {%- if s.menu.size > 0 %}
       <div class="kicker rv" style="margin-top:44px">Full menu</div>
       <div class="more rv">
-        <div><span>Russian manicure, no polish<small>45–75 min</small></span><span>$55+</span></div>
-        <div><span>Russian gel manicure, short / medium<small>from 2 h</small></span><span>$70+</span></div>
-        <div><span>Russian gel manicure, long<small>from 2 h 30 min</small></span><span>$80+</span></div>
-        <div><span>Russian manicure with hard gel, short / medium<small>from 2 h</small></span><span>$75+</span></div>
-        <div><span>Russian manicure with hard gel, long<small>from 2 h 30 min</small></span><span>$85+</span></div>
-        <div><span>Gel nail extensions, extra long<small>from 3 h 30 min, lasts up to 3 weeks</small></span><span>$170+</span></div>
-        <div><span>Smart pedicure, no polish<small>from 1 h</small></span><span>$60+</span></div>
-        <div><span>Smart pedicure with gel<small>from 1 h 45 min</small></span><span>$85+</span></div>
-        <div><span>French manicure design<small>30 min, add-on</small></span><span>$20+</span></div>
-        <div><span>Broken nail repair, 1 nail<small>10 min</small></span><span>$5</span></div>
-        <div><span>Brow correction, threading and tint<small>10 min</small></span><span>$10+</span></div>
-        <div><span>Eyebrow lamination<small>55 min, lasts 6–8 weeks</small></span><span>$80+</span></div>
+        {%- for m in s.menu %}
+        <div><span>{{ m.name }}{% if m.details and m.details != '' %}<small>{{ m.details }}</small>{% endif %}</span><span>{{ m.price }}</span></div>
+        {%- endfor %}
       </div>
-      <p class="note rv">Prices depend on the master’s level. Pick your master when you book.</p>
+      {%- endif %}
+      {%- if s.note and s.note != '' %}<p class="note rv">{{ s.note }}</p>{% endif %}
     </div>
   </section>
 
   <section id="studio" class="alt">
     <div class="wrap studio">
-      <div class="big rv"><img loading="lazy" src="salon.jpg" alt="Inside Shahnoz Nails studio"><span>505 Brighton Beach Ave, 2nd floor</span></div>
+      <div class="big rv"><img loading="lazy" src="{{ h.studio_photo | remove_first: '/' }}" alt="Inside {{ b.name | escape }}">{% if h.studio_photo_caption and h.studio_photo_caption != '' %}<span>{{ h.studio_photo_caption }}</span>{% endif %}</div>
       <div class="txt rv">
         <div class="kicker">The studio</div>
-        <h2>Step <em>inside</em></h2>
-        <p>Russian manicure specialists in Brighton Beach. Our team trained at Paris Nail Shop, Oza Art School and Luzan School, and we treat every client like family.</p>
-        <ul class="feat"><li>Sterile, single-use tools</li><li>Premium gel and hard gel</li><li>Experienced, detail-focused masters</li><li>Walk-ins and last-minute visits welcome</li><li>Easy online booking, 24/7</li></ul>
+        <h2>{{ h.studio_title }} <em>{{ h.studio_title_accent }}</em></h2>
+        <p>{{ h.studio_text }}</p>
+        <ul class="feat">{% for f in h.studio_highlights %}<li>{{ f }}</li>{% endfor %}</ul>
       </div>
     </div>
   </section>
@@ -350,18 +359,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   <section id="team">
     <div class="wrap">
       <div class="head rv"><div><div class="kicker">Our team</div><h2>Meet the <em>masters</em></h2></div>
-        <p class="muted">Five masters, one standard: precise, clean and unhurried.</p></div>
+        <p class="muted">{{ t.intro }}</p></div>
       <div class="masters rv">
-        <article class="master"><div class="ph"><img loading="lazy" src="t-shahnoz.jpg" alt="Shahnoz, Owner · Educator at Shahnoz Nails"></div>
-          <div class="t"><span class="lvl">Owner · Educator</span><h3>Shahnoz</h3><p>Pro Top Master with 7+ years in beauty. Russian manicure, gel extensions, lashes and brows. By request only.</p><a class="btn btn-ghost" href="tel:+13474917777">Call to book</a></div></article>
-        <article class="master"><div class="ph"><img loading="lazy" src="t-maya.jpg" alt="Maya, Top Master at Shahnoz Nails"></div>
-          <div class="t"><span class="lvl">Top Master</span><h3>Maya</h3><p>5+ years of experience. Loves detail and makes every visit feel special.</p><a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">Book with Maya</a></div></article>
-        <article class="master"><div class="ph"><img loading="lazy" src="t-bonya.jpg" alt="Bonya, Top Master at Shahnoz Nails"></div>
-          <div class="t"><span class="lvl">Top Master</span><h3>Bonya</h3><p>Takes her time so every nail comes out perfect. A client favorite.</p><a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">Book with Bonya</a></div></article>
-        <article class="master"><div class="ph"><img loading="lazy" src="t-shaira.jpg" alt="Shaira, Pro Master at Shahnoz Nails"></div>
-          <div class="t"><span class="lvl">Pro Master</span><h3>Shaira</h3><p>Fun, unique designs that let your personality shine through.</p><a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">Book with Shaira</a></div></article>
-        <article class="master"><div class="ph"><img loading="lazy" src="t-dilya.jpg" alt="Dilya, Master at Shahnoz Nails"></div>
-          <div class="t"><span class="lvl">Master</span><h3>Dilya</h3><p>Clean, careful work and a calm, friendly visit.</p><a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">Book with Dilya</a></div></article>
+        {%- for m in t.masters %}
+        <article class="master"><div class="ph"><img loading="lazy" src="{{ m.photo | remove_first: '/' }}" alt="{{ m.name | escape }}, {{ m.level | escape }} at {{ b.name | escape }}"></div>
+          <div class="t"><span class="lvl">{{ m.level }}</span><h3>{{ m.name }}</h3><p>{{ m.bio }}</p>{% if m.booking == 'Call to book' %}<a class="btn btn-ghost" href="tel:{{ tel }}">Call to book</a>{% else %}<a class="btn btn-dark" {{ book }}>Book with {{ m.name }}</a>{% endif %}</div></article>
+        {%- endfor %}
       </div>
     </div>
   </section>
@@ -371,25 +374,21 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
       <div class="head rv"><div><div class="kicker">Our work</div><h2>Made by <em>hand</em></h2></div>
       </div>
       <div class="gal rv">
-        <figure class="tall"><img loading="lazy" src="green.jpg" alt="Emerald glitter gel"></figure>
-        <figure><img loading="lazy" src="white.jpg" alt="White square nails"></figure>
-        <figure><img loading="lazy" src="g-pink.jpg" alt="Pink almond nails"></figure>
-        <figure class="tall"><img loading="lazy" src="dark.jpg" alt="Deep cherry gel"></figure>
-        <figure class="wide"><img loading="lazy" src="navy.jpg" alt="Navy gel manicure"></figure>
-        <figure><img loading="lazy" src="g-marble.jpg" alt="Marble almond nails"></figure>
-        <figure><img loading="lazy" src="g-shimmer.jpg" alt="Shimmer nails"></figure>
-        <figure class="wide"><img loading="lazy" src="g-french2.jpg" alt="French manicure"></figure>
+        {%- for p in g.photos %}
+        <figure{% if p.size == 'Tall' %} class="tall"{% elsif p.size == 'Wide' %} class="wide"{% endif %}><img loading="lazy" src="{{ p.photo | remove_first: '/' }}" alt="{{ p.description | escape }}"></figure>
+        {%- endfor %}
       </div>
     </div>
   </section>
 
   <section id="reviews">
     <div class="wrap">
-      <div class="head rv"><div><div class="kicker">Reviews</div><h2>4.5 ★ from <em>175 clients</em></h2></div></div>
+      <div class="head rv"><div><div class="kicker">Reviews</div><h2>{{ b.google_rating }} ★ from <em>{{ b.google_reviews_count }} clients</em></h2></div></div>
       <div class="revs rv">
-        <div class="rev"><div class="stars">★★★★★</div><p>“The wait was worth it. My girl Bonya was awesome.”</p><small>Loren M., Google</small></div>
-        <div class="rev"><div class="stars">★★★★★</div><p>“The service was professional, friendly, and very attentive to detail. Highly recommend!”</p><small>Julia S., Google</small></div>
-        <div class="rev"><div class="stars">★★★★★</div><p>“Maya and the other nail artists were very warm and welcoming! My nails are beautiful!”</p><small>Grace C., Google</small></div>
+        {%- for v in r.reviews %}
+        {%- assign n = v.stars | default: 5 %}
+        <div class="rev"><div class="stars">{% for i in (1..n) %}★{% endfor %}</div><p>“{{ v.text }}”</p><small>{{ v.author }}</small></div>
+        {%- endfor %}
       </div>
     </div>
   </section>
@@ -400,31 +399,33 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
         <div class="kicker">Visit us</div>
         <h2>See you <em>soon</em></h2>
         <dl>
-          <div><dt>Address</dt><dd>505 Brighton Beach Ave, 2nd Floor<br>Brooklyn, NY 11235</dd></div>
-          <div><dt>Phone</dt><dd><a href="tel:+13474917777">(347) 491-7777</a></dd></div>
-          <div><dt>Hours</dt><dd>Every day, 9 AM – 6 PM<br><small class="muted" style="font-size:15px">Walk-ins welcome, call for availability</small></dd></div>
-          <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/shahnoz_nails_brooklyn" target="_blank" rel="noopener">@shahnoz_nails_brooklyn</a></dd></div>
+          <div><dt>Address</dt><dd>{{ b.address_line1 }}<br>{{ b.address_line2 }}</dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:{{ tel }}">{{ b.phone }}</a></dd></div>
+          <div><dt>Hours</dt><dd>{{ b.hours }}{% if b.hours_note and b.hours_note != '' %}<br><small class="muted" style="font-size:15px">{{ b.hours_note }}</small>{% endif %}</dd></div>
+          {%- if insta != '' %}
+          <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/{{ insta }}" target="_blank" rel="noopener">@{{ insta }}</a></dd></div>
+          {%- endif %}
         </dl>
-        <a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">Book online</a>
-        <p class="policy">Booking requires a $20 deposit. Please give us 24 hours notice to cancel or reschedule. Late cancellations and no-shows forfeit the deposit.</p>
+        <a class="btn btn-dark" {{ book }}>Book online</a>
+        {%- if b.booking_policy and b.booking_policy != '' %}<p class="policy">{{ b.booking_policy }}</p>{% endif %}
       </div>
-      <div class="map rv"><iframe loading="lazy" title="Map" src="https://maps.google.com/maps?q=Shahnoz%20Nails%2C%20505%20Brighton%20Beach%20Ave%2C%20Brooklyn%2C%20NY%2011235&z=16&hl=en&output=embed"></iframe></div>
+      <div class="map rv"><iframe loading="lazy" title="Map" src="https://maps.google.com/maps?q={{ b.name | append: ', ' | append: b.address_line1 | append: ', ' | append: b.address_line2 | url_encode }}&z=16&hl=en&output=embed"></iframe></div>
     </div>
   </section>
   <section class="cta" id="book">
     <div class="wrap rv">
-      <h2>Ready for perfect nails?<em class="shine">Book Shahnoz.</em></h2>
-      <p>Book online in a minute, any time of day, or give us a call.</p>
-      <a class="phone" href="tel:+13474917777">(347) 491-7777</a><br>
-      <a class="btn btn-call" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">Book now <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+      <h2>{{ h.final_title }}<em class="shine">{{ h.final_title_accent }}</em></h2>
+      <p>{{ h.final_text }}</p>
+      <a class="phone" href="tel:{{ tel }}">{{ b.phone }}</a><br>
+      <a class="btn btn-call" {{ book }}>Book now <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
     </div>
   </section>
 </main>
-<footer><div class="wrap"><span>© 2026 Shahnoz Nails</span><span>505 Brighton Beach Ave, Brooklyn</span></div></footer>
+<footer><div class="wrap"><span>© {{ site.time | date: '%Y' }} {{ b.name }}</span><span>{{ b.address_line1 | split: ',' | first }}, {{ b.address_line2 | split: ',' | first }}</span></div></footer>
 
 <div class="bar" id="bar">
-  <a class="btn btn-ghost" href="tel:+13474917777">Call</a>
-  <a class="btn btn-dark" href="https://shahnoznails.glossgenius.com/book" target="_blank" rel="noopener">Book online</a>
+  <a class="btn btn-ghost" href="tel:{{ tel }}">Call</a>
+  <a class="btn btn-dark" {{ book }}>Book online</a>
 </div>
 
 <script>

@@ -1,0 +1,6 @@
+# Site settings. The content itself lives in the _data folder
+# and is edited at app.pagescms.org.
+title: Shahnoz Nails
+exclude:
+  - README.md
+  - .pages.yml
