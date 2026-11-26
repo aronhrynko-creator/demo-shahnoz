@@ -119,7 +119,6 @@ content:
       - name: photos
         label: Photos
         type: object
-        description: "Drag photos to change the order. 8 photos fill the grid best."
         list:
           collapsible:
             collapsed: true
