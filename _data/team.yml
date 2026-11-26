@@ -1,8 +1,9 @@
-intro: "Five masters, one standard: precise, clean and unhurried."
+intro: "Five masters, one standard: precise, clean and unhurried. CMS-TEST"
 masters:
   - name: Shahnoz
     level: Owner · Educator
-    bio: Pro Top Master with 7+ years in beauty. Russian manicure, gel extensions, lashes and brows. By request only.
+    bio: Pro Top Master with 7+ years in beauty. Russian manicure, gel extensions,
+      lashes and brows. By request only.
     photo: /images/t-shahnoz.jpg
     booking: Call to book
   - name: Maya
